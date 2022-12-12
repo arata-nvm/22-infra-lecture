@@ -6,7 +6,7 @@
 
 ## PART 1: サーバーサイド <a href="#part1-server" id="part1-server"></a>
 
-* [\[wip\] 第2回 / APIサーバーの構築](part1-server/2-api-server.md)
+* [第2回 / APIサーバーの構築](part1-server/2-api-server.md)
 * [\[wip\] 第3回 / Slack botの作成](part1-server/3-slack-api.md)
 
 ## PART 2: クライアントサイド <a href="#part2-client" id="part2-client"></a>
