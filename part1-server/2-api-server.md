@@ -1,19 +1,17 @@
 # 第2回 / APIサーバーの構築
 
-{% hint style="warning" %}
-🚧 工事中。
-{% endhint %}
-
 ### この章のゴール
 
 以下の事項について理解する。
 
 * APIサーバー
+* Replit
 * Go
   * 基本的な文法
   * 実行方法
   * echo
-* Heroku
+
+アクセスすると引数`id`に渡した値を文字列として返すAPIサーバーを構築する: [https://foolhardygiganticprocedure.aratasub.repl.co/?id=hoge](https://foolhardygiganticprocedure.aratasub.repl.co/?id=hoge)&#x20;
 
 ### APIサーバーとは
 
