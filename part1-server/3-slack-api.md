@@ -1,6 +1,6 @@
 # 第3回 / Slack botの作成
 
-### この章のゴール
+この章のゴール
 
 次の事項について理解する。
 
@@ -36,7 +36,7 @@ $ curl -X POST https://FoolhardyGiganticProcedure.aratasub.repl.co?id=hoge
 
 　最後に、緑色の「設定を保存する」ボタンを押してください。後でWebhook URLをコピペするので、このページは開いたままにしておいてください。
 
-<figure><img src="../.gitbook/assets/Screenshot 2022-12-14 at 17.21.58.png" alt=""><figcaption><p>図3: Incoming Webhookの画面(3/3)</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2022-12-14 at 17.21.58 (1).png" alt=""><figcaption><p>図3: Incoming Webhookの画面(3/3)</p></figcaption></figure>
 
 ### cURLでリクエストを送る
 
