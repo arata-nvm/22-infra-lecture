@@ -11,8 +11,8 @@
 
 ## PART 2: クライアントサイド <a href="#part2-client" id="part2-client"></a>
 
-* [\[wip\] 第4回 / Linuxの操作](part2-client/4-linux.md)
-* [\[wip\] 第5回 / Raspberry Piの操作](part2-client/5-raspberry-pi.md)
+* [第4回 / Linuxの操作](part2-client/4-linux.md)
+* [第5回 / Raspberry Piの操作](part2-client/5-raspberry-pi.md)
 
 ## PART 3: 高度なトピック <a href="#part3-advanced" id="part3-advanced"></a>
 

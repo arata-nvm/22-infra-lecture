@@ -1,9 +1,5 @@
 # 第3回 / Slack botの作成
 
-{% hint style="warning" %}
-🚧 工事中。
-{% endhint %}
-
 ### この章のゴール
 
 次の事項について理解する。
@@ -142,7 +138,7 @@ import (
 </strong><strong>	"strings"
 </strong>)
 
-<strong>const WEBHOOK_URL = "https://hooks.slack.com/services/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"
+<strong>const WEBHOOK_URL = "&#x3C;自分のWebhook URL>"
 </strong>
 func main() {
 	e := echo.New()
