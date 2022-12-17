@@ -11,7 +11,7 @@
   * 実行方法
   * echo
 
-アクセスすると引数`id`に渡した値を文字列として返すAPIサーバーを構築する: [https://foolhardygiganticprocedure.aratasub.repl.co/?id=hoge](https://foolhardygiganticprocedure.aratasub.repl.co/?id=hoge)&#x20;
+また、アクセスすると引数`id`に渡した値を文字列として返すAPIサーバーを構築する。
 
 ### APIサーバーとは
 
