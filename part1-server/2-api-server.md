@@ -176,7 +176,7 @@ func main() {
 {% endhint %}
 
 {% hint style="info" %}
-このURLにアクセスできるようになるまで数十秒程度かかるようです。もし表示されない場合は少し待ってからサイドアクセスしてみてください。
+このURLにアクセスできるようになるまで数十秒程度かかるようです。もし表示されない場合は少し待ってから再度アクセスしてみてください。
 {% endhint %}
 
 <figure><img src="../.gitbook/assets/Screenshot 2022-12-12 at 17.50.39.png" alt=""><figcaption><p>図8: APIサーバーにアクセスした結果</p></figcaption></figure>
