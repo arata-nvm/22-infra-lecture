@@ -185,12 +185,13 @@ func main() {
 
 　`main.go`に入力したプログラムを読んで、なぜこうなったのかを見てみましょう。一番重要なのは次に示す3行です。
 
-<pre class="language-go"><code class="lang-go">(略)
+```go
+(略)
 e.GET("/", func(c echo.Context) error { // [1]
 	return c.String(200, "Hello, World!") // [2]
 })
-<strong>(略)
-</strong></code></pre>
+(略)
+```
 
 まず\[1]で、`GET`メソッドで`/`へリクエストが送られたときに処理を行うことを指示しています。そして\[2]で、ステータスコード`200`で文字列`"Hello, World!"`をレスポンスとして返すことを指示しています。
 
