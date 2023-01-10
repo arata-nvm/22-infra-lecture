@@ -15,30 +15,58 @@
 
 ### Raspberry Piとは
 
-　小型のコンピューターです。もともと教育用に開発されましたが、現在は個人開発や製品開発など幅広い分野で使われています。
+　Raspberry Piは小型のコンピューターです。もともと教育用に開発されましたが、現在は個人開発や製品開発など幅広い分野で使われています。
 
 　GUIとCUIの両方で操作できますが、今回は時間の関係からCUIで操作することにします。
 
 ### 準備
 
-以下の装置を準備してください。
+　以下の装置を準備してください。
 
 * Raspberry Pi Model B+ v1.2（以下、Raspberry Piと呼称）
 * Sony PaSoRi RC-S380（以下、ICカードリーダーと呼称）
 * LANケーブル
 * 電源ケーブル
 
-　自分のPCにVisual Studio Codeをインストールし、さらに拡張機能「Remote Development」をインストールしてください。
+　自分のPCをSYSLANに接続してください。
 
 ### ログイン
 
-　自分のPCでVisual Studio Codeを開きます。左下の緑ボタンから、「Remote-SSH: Connect to Host」を選択します。
+1. Windowsターミナルを開きます
+2. `ssh pi@192.168.111.134`を実行します
+3. パスワードを入力します。
+4. `pi@raspberrypi:~ $`と表示されたらログイン成功です
 
-　接続先を聞かれたら`raspberry@<IP>`を入力します。そして「フォルダーを開く」から、`/home/raspberry`を開きます。
+{% hint style="info" %}
+手順2についての説明：
+
+`sshはリモートのコンピューターに接続して操作するためのコマンドです。`
+
+`192.168.111.134はSYSLANにおけるRaspberry piのIPアドレス、piはRaspberry piでのユーザー名を意味しています。`
+{% endhint %}
+
+### Linuxの操作の復習
+
+* ディレクトリ（＝フォルダ）への移動: `cd <移動先のディレクトリ名>`
+* ディレクトリの作成: `mkdir <ディレクトリ名>`
+* 現在のディレクトリにあるファイルの確認: `ls`
+* ファイルの編集: `vi <編集したいファイル名>` or `nano <編集したいファイル名>`
+
+#### ファイルの編集について（vi）
+
+　ようこそ。viはすばらしいエディターです。
+
+* `i`を押すと編集モードになり、文字が打てます
+* `ESC`を押したのち`:wq`を入力するとファイルを保存して閉じます。
+
+#### ファイルの編集について（nano）
+
+* メモ帳と同じように文字が打てます
+* `CTRL+X`->`Y`->`ENTER`でファイルを保存して閉じます。
 
 ### ICカードリーダーを使う
 
-　左の「ファイルエクスプローラー」から`card_reader.py`というファイルを作り、次のプログラムを入力する。\`#\`から始まる行は入力しなくてよいです。
+　まずディレクトリ`infra-lecture`へ移動してください。そして自分のSlack IDと同じ名前のディレクトリを作成してください。次に、`card_reader.py`という名前のファイルを編集し、次のプログラムを入力してください。`#`から始まる行は入力しなくてよいです。
 
 ```python
 import nfc
@@ -64,7 +92,7 @@ def connected(tag):
       bc = nfc.tag.tt3.BlockCode(0, service=0)
       data = tag.read_without_encryption([sc], [bc])
       # 受け取った情報から学籍番号を抽出する
-      sid = data[2:9]
+      sid = int(data[2:9])
       
       # 学籍番号をコンソールに表示する
       print(sid)
@@ -78,10 +106,16 @@ clf = nfc.ContactlessFrontend('usb')
 clf.connect(rdwr={'on-connect': connected})
 ```
 
-　コンソールから次のコマンドを実行する。
+　終わったら、ターミナルから次のコマンドを実行してください。
 
 ```bash
 $ python3 card_reader.py
 ```
 
-　ICカードリーダーに学生証を近づけると、コンソールに学籍番号が表示され、同時にSlackへメッセージが送信されることを確認する。
+　ICカードリーダーに学生証を近づけると、ターミナルに学籍番号が表示され、同時にSlackへメッセージが送信されることを確認してください。
+
+### 時間が余ったら
+
+* [https://qiita.com/pf\_packet/items/9a50d9f3b1f478930b02](https://qiita.com/pf\_packet/items/9a50d9f3b1f478930b02) を読んでNFCのしくみを理解する
+  * `SYSTEM_CODE`、`SERVICE_CODE`に関連
+* GPIOを使ってLEDを光らせる
