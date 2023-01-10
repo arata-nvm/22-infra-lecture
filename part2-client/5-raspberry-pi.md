@@ -114,6 +114,12 @@ $ python3 card_reader.py
 
 　ICカードリーダーに学生証を近づけると、ターミナルに学籍番号が表示され、同時にSlackへメッセージが送信されることを確認してください。
 
+{% hint style="warning" %}
+実行時にno such deviceと表示されたら：
+
+他の人のプログラムがICカードリーダーを使用している可能性が高いです。ICカードリーダーは同時に1つのプログラムからしか使用できません。時間をおいて再度試してみてください。
+{% endhint %}
+
 ### 時間が余ったら
 
 * [https://qiita.com/pf\_packet/items/9a50d9f3b1f478930b02](https://qiita.com/pf\_packet/items/9a50d9f3b1f478930b02) を読んでNFCのしくみを理解する
