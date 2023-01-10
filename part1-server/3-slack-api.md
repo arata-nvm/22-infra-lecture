@@ -92,7 +92,6 @@ $ curl <URL>
 package main
 
 import (
-	"fmt"
 	"net/http"
 	"strings"
 )
