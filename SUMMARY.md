@@ -16,4 +16,4 @@
 
 ## PART 3: 高度なトピック <a href="#part3-advanced" id="part3-advanced"></a>
 
-* [\[wip\] 第6回 / データベース](part3-advanced/6-db.md)
+* [第6回 / Monbanの移植](part3-advanced/6-db.md)
