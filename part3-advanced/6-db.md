@@ -14,6 +14,7 @@
 2. ToolsのSecretsから環境変数を設定する
 3. 実行する
 4. `curl -X POST <URL> -H "Content-Type: application/json" -d '{"student_id": 0}'`をターミナルで叩いてSlackにメッセージが投稿されるか確認する
+5. 鯖室のRaspberry Piのプログラム`~/nfc/update.py` のURLを更新する。
 
 上記の手順を踏んでうまく動作したらこの節は終わり。動作しなかったら頑張って原因を探し、修正する。
 
